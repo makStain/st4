@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="head">
+        <header>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a href="#">
+                        <b>TWITTER</b>
+                    </a>
+                    <div class="container-fluid">
+                        <form class="d-flex" role="search">
+                          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                          <button class="btn btn-outline-light" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul>
+                            <a href="#"><li><b>Tweets</b></li></a>
+                            <a style="color: white;" required><li><b id="userName"></b></li></a>
+                            <a href="index.html"><li><b>Logout</b></li></a>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="row g-3" novalidate>
+            <div class="row g-3" style="width: 30%;" novalidate="">
+                <h2>Welcome <b id="userFullName"></b></h2>
+                <div class="row-md-1">
+                    <label for="validationCustomUsername" class="form-label">EMAIL&nbsp;:</label>
+                    <b><p id="userEmail"></p></b>
+                </div>
+                <div class="row-md-3">
+                    <label for="validationCustom01" class="form-label">FULL NAME&nbsp;:</label>
+                    <b><p id="userFname"></p></b>
+                </div>
+                <div class="row-md-4">
+                    <label for="validationCustom03" class="form-label">COUNTRY&nbsp;:</label>
+                    <b><p id="userCountry"></p></b>
+                </div>
+                <div class="row-md-5">
+                    <label for="validationCustom04" class="form-label">BIRTHDATE&nbsp;:</label>
+                    <b><p id="userBirthday"></p></b>
+                </div>
+            </div>
+            
+        </main>
+    </div>
+    <script>
+        function logout() {
+          // Очищаем localStorage и перенаправляем на страницу входа
+          localStorage.clear();
+          window.location.href = 'login.html';
+        }
+      
+        // Заполняем данные на странице после регистрации или входа
+        document.getElementById('userEmail').innerText = localStorage.getItem('userEmail');
+        document.getElementById('userName').innerText = localStorage.getItem('userName');
+        document.getElementById('userFullName').innerText = localStorage.getItem('userFullName');
+        document.getElementById('userFname').innerText = localStorage.getItem('userFname');
+        document.getElementById('userCountry').innerText = localStorage.getItem('userCountry');
+        document.getElementById('userBirthday').innerText = localStorage.getItem('userBirthday');
+    </script>
+</body>
+</html>

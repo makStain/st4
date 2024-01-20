@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="head">
+        <header>
+            <nav class="navbar navbar-expand-lg">
+                <a href="#">
+                    <b>TWITTER</b>
+                </a>
+            </nav>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul>
+                            <a href="#"><li><b>Tweets</b></li></a>
+                            <a href="login.html"><li><b>Login</b></li></a>
+                            <a href="index.html"><li><b>Register</b></li></a>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="row g-3 needs-validation" style="margin-top: 5%;" novalidate>
+            <form class="row g-3 needs-validation" style="width: 30%;" novalidate="">
+                <div class="row-md-1">
+                    <label for="validationCustomUsername" class="form-label">EMAIL&nbsp;:</label>
+                    <div class="input-group has-validation">
+                      <input type="text" class="form-control" id="loginEmail" aria-describedby="inputGroupPrepend" required>
+                      <div class="invalid-feedback">
+                        Please choose a email.
+                      </div>
+                    </div>
+                </div>
+
+                <div class="row-md-2">
+                    <label for="validationCustom01" class="form-label">PASSWORD&nbsp;:</label>
+                    <input type="password" class="form-control" id="loginPassword" required="">
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                </div>
+                
+                <div class="col-12">
+                    <span style="text-align: center;">Don't have an account?&nbsp;<a href="index.html" style="text-decoration: none;">Register</a></span>
+                    <button class="btn" type="button" onclick="login()" style="background-color: #2c8391; color: white; width: 100%;">SIGN IN</button>
+                </div>
+            </form>
+            <script src="script2.js"></script>
+        </main>
+    </div>
+</body>
+</html>
